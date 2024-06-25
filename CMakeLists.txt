@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.15.0)
-project(CobraEngine VERSION 0.0.1)
+project(Cobra VERSION 0.0.1)
+
+if (MSVC)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS, ON)
+endif()
 
 file(GLOB SRCS
     src/*.c
