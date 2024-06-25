@@ -1,7 +1,7 @@
-#include "cobra/test.h"
+#include "test.h"
 
 #include <stdio.h>
 
-void Print() {
+CBRA_API void Print() {
     printf_s("Hi!\n");
 }
