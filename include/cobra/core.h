@@ -2,8 +2,6 @@
 
 #include <stdio.h>
 
-#define CBRA_SHARED
-
 #ifdef _WIN32
     #ifdef CBRA_SHARED
         #define CBRA_API __declspec(dllexport)
