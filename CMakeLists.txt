@@ -11,5 +11,5 @@ file(GLOB SRCS
 add_definitions(-DCBRA_SHARED)
 
 add_library(${PROJECT_NAME} SHARED ${SRCS})
-target_include_directories(${PROJECT_NAME} PRIVATE include)
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
+include_directories(include)
