@@ -1,7 +1,5 @@
 #pragma once
 
-#include <stdio.h>
-
 #ifdef _WIN32
     #ifdef CBRA_SHARED
         #define CBRA_API __declspec(dllexport)

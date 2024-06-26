@@ -14,7 +14,7 @@ file(GLOB SRCS
 
 add_definitions(-DCBRA_SHARED)
 
-include_directories(include)
+include_directories(include glfw/include)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
 
