@@ -2,3 +2,4 @@
 
 #include "core.h"
 
+extern void ApplicationStart();

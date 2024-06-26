@@ -1,4 +1,3 @@
 #pragma once
 
-#include "cobra/core.h"
-#include "cobra/entry.h"
+#include "cobra/application.h"
