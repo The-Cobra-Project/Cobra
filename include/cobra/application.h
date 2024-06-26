@@ -2,4 +2,4 @@
 
 #include "core.h"
 
-extern void ApplicationStart();
+extern CBRA_API void ApplicationStart() {};
