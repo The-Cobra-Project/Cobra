@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15.0)
 project(Cobra VERSION 0.0.1)
 
 if (MSVC)
-    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS, ON)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 
 file(GLOB SRCS
@@ -14,10 +14,10 @@ file(GLOB SRCS
 
 add_definitions(-DCBRA_SHARED)
 
-include_directories(include glfw/include)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 if (MSVC)
-    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS, OFF)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS OFF)
 endif()

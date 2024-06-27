@@ -1,7 +1,5 @@
-#pragma once
-
-#include "core.h"
-#include "application.h"
+#include "cobra/core.h"
+#include "cobra/application.h"
 
 #ifdef CBRA_PLAT_WIN32
 #include <Windows.h>
