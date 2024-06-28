@@ -3,9 +3,9 @@
 LRESULT WindowProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam) {
     switch (Msg) {
         case WM_DESTROY:
-            #ifdef CBRA_DEBUG
+            // #ifdef CBRA_DEBUG
             FreeConsole();
-            #endif
+            // #endif
             PostQuitMessage(0);
             return 0;
     }
