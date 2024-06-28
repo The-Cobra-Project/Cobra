@@ -10,7 +10,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine,
     win32_Window w = cbra_win32_CreateWindow(hInstance);
 
     ShowWindow(w.hwnd, nCmdShow);
+    #ifdef CBRA_DEBUG
     AllocConsole();
+    #endif
 
     ApplicationStart();
 
