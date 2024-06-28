@@ -1,3 +1,3 @@
 #pragma once
 
-void LogInfo(const char *msg);
+void win32_LogInfo(const char *msg);
