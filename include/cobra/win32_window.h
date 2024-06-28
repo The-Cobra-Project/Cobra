@@ -1,9 +1,6 @@
 #pragma once
 
-#include "core.h"
-
-#ifdef CBRA_PLAT_WIN32
-#include <Windows.h>
+#include <windows.h>
 
 typedef struct {
     WNDCLASSW wc;
@@ -11,5 +8,3 @@ typedef struct {
 } win32_Window;
 
 win32_Window cbra_win32_CreateWindow(HINSTANCE hInstance);
-
-#endif

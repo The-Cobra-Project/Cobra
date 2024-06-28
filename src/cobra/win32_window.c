@@ -4,11 +4,11 @@ win32_Window cbra_win32_CreateWindow(HINSTANCE hInstance) {
     win32_Window w = { 0 };
 
     WNDCLASSW wc = { 0 };
-    wc.lpfnWndProc = DefWindowProc;
+    wc.lpfnWndProc = DefWindowProcW;
     wc.hInstance = hInstance;
     wc.lpszClassName = L"Engine";
 
-    RegisterClass(&wc);
+    RegisterClassW(&wc);
 
     HWND hwnd = CreateWindowExW(
         0,

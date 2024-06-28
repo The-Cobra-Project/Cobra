@@ -19,5 +19,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 if (MSVC)
+    target_link_libraries(${PROJECT_NAME} User32.lib)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS OFF)
 endif()

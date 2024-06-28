@@ -2,7 +2,7 @@
 #include "application.h"
 
 #ifdef CBRA_PLAT_WIN32
-#include <Windows.h>
+#include <windows.h>
 
 #include "win32_window.h"
 
