@@ -1,10 +1,19 @@
 #include "cobra/win32_window.h"
 
+LRESULT WindowProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam) {
+    switch (Msg) {
+        case WM_DESTROY:
+            PostQuitMessage(0);
+            return 0;
+    }
+    return DefWindowProc(hWnd, Msg, wParam, lParam);
+}
+
 win32_Window cbra_win32_CreateWindow(HINSTANCE hInstance) {
     win32_Window w = { 0 };
 
     WNDCLASSW wc = { 0 };
-    wc.lpfnWndProc = DefWindowProcW;
+    wc.lpfnWndProc = WindowProc;
     wc.hInstance = hInstance;
     wc.lpszClassName = L"Engine";
 
