@@ -22,7 +22,7 @@ win32_Window cbra_win32_CreateWindow(HINSTANCE hInstance) {
 
     RegisterClassW(&wc);
 
-    HWND hwnd = CreateWindowExW(
+    HWND hwnd = CreateWindowEx(
         0,
         L"Engine",
         L"Window",
