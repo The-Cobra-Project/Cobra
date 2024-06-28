@@ -14,8 +14,7 @@ src/**/*.c
 include/**/*.h
 )
 
-add_definitions(-DCBRA_SHARED)
-# add_definitions(-DCBRA_DEBUG)
+add_definitions(-DCBRA_SHARED -DCBRA_DEBUG)
 
 add_library(${PROJECT_NAME} SHARED ${SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
