@@ -2,8 +2,7 @@
 
 #include "cobra/core.h"
 
-void InitLog();
 #ifdef CBRA_PLAT_WIN32
 #include "win32_log.h"
-#define LogInfo win32_LogInfo;
+#define LogInfo(msg) win32_LogInfo(msg);
 #endif
