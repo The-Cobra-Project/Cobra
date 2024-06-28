@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15.0)
 project(Cobra VERSION 0.0.1)
 
-set(COBRA_DEBUG ON)
+set(COBRA_DEBUG OFF)
 
 if (COBRA_DEBUG)
     add_definitions(-DCBRA_DEBUG)
