@@ -3,6 +3,7 @@
 LRESULT WindowProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam) {
     switch (Msg) {
         case WM_DESTROY:
+            FreeConsole();
             PostQuitMessage(0);
             return 0;
     }
