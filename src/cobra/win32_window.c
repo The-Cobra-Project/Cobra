@@ -9,7 +9,7 @@ LRESULT WindowProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam) {
             PostQuitMessage(0);
             return 0;
     }
-    return DefWindowProc(hWnd, Msg, wParam, lParam);
+    return DefWindowProcW(hWnd, Msg, wParam, lParam);
 }
 
 win32_Window cbra_win32_CreateWindow(HINSTANCE hInstance) {
