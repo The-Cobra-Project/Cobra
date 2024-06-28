@@ -3,22 +3,20 @@ project(Cobra VERSION 0.0.1)
 
 set(COBRA_DEBUG ON)
 
-if (COBRA_DEBUG)
-    add_definitions(-DCBRA_DEBUG)
-endif()
 
 if (MSVC)
-    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 
 file(GLOB SRCS
-    src/*.c
-    include/*.h
-    src/**/*.c
-    include/**/*.h
+src/*.c
+include/*.h
+src/**/*.c
+include/**/*.h
 )
 
 add_definitions(-DCBRA_SHARED)
+add_definitions(-DCBRA_DEBUG)
 
 add_library(${PROJECT_NAME} SHARED ${SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
