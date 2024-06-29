@@ -1,5 +1,4 @@
 #include "core.h"
-#include "application.h"
 
 #ifdef CBRA_PLAT_WIN32
 #include <windows.h>
@@ -13,8 +12,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine,
     #ifdef CBRA_DEBUG
     AllocConsole();
     #endif
-
-    ApplicationStart();
 
     MSG msg;
     while (GetMessage(&msg, NULL, 0, 0) > 0) {

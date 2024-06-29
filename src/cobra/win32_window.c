@@ -1,7 +1,11 @@
 #include "cobra/win32_window.h"
 
+#include "cobra/application.h"
+
 LRESULT WindowProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam) {
     switch (Msg) {
+        case WM_CREATE:
+            ApplicationStart();
         case WM_DESTROY:
             #ifdef CBRA_DEBUG
             FreeConsole();
