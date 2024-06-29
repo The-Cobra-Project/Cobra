@@ -12,11 +12,14 @@ src/**/*.c
 include/**/*.h
 )
 
+find_package(Vulkan REQUIRED)
+
 add_definitions(-DCBRA_SHARED)
 
 add_library(${PROJECT_NAME} SHARED ${SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C_STANDARD)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_link_libraries(${PROJECT_NAME} Vulkan::Vulkan)
 
 if (MSVC)
     target_link_libraries(${PROJECT_NAME} User32.lib)
