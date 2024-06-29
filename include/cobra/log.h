@@ -1,6 +1,6 @@
 #pragma once
 
-#include "cobra/core.h"
+#include "core.h"
 
 #ifdef CBRA_PLAT_WIN32
 #include "win32_log.h"
